@@ -4,6 +4,12 @@ class DogsController < ApplicationController
   end
 
   def create
+    @dog = Dog.new(dog_params)
+    if @dog.save
+      redirect_to @dog
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -11,6 +17,14 @@ class DogsController < ApplicationController
   end
 
   def new
+  end
+
+  private
+
+  def dog_params
+    p params
+    p params[:dog][:name]
+    params.require(:dog).permit(:name,:breed,:age)
   end
 
 end

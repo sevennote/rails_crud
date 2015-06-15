@@ -1,1 +1,7 @@
 <h1>This is our new!!!</h1>
+<%= form_for :dog, url: dogs_path do |f| %>
+  name: <%= f.text_field(:name )%>
+  breed: <%= f.text_field(:breed) %>
+  age: <%= f.text_field (:age) %>
+  <%= f.submit %>
+<% end %>
