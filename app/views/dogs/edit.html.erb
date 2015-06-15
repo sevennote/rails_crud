@@ -1,0 +1,8 @@
+<h1>Let's Edit:</h1>
+
+<%= form_for @dog do |f| %>
+  <%=f.text_field :name %>
+  <%=f.text_field :breed %>
+  <%=f.text_field :age %>
+  <%=f.submit 'edit dog' %>
+<% end %>
