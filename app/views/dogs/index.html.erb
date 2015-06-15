@@ -1,6 +1,2 @@
 <h1>This is index</h1>
-<ul>
-  <% @dogs.each do |dog| %>
-  <li><a href="/dogs/<%=dog.id%>"> <%= dog.name %></a> </li>
-  <% end %>
-</ul>
+<%= render partial: "dogs", dog: @dogs %>

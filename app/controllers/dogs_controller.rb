@@ -33,6 +33,7 @@ class DogsController < ApplicationController
   def destroy
     dog = Dog.find(params[:id])
     dog.destroy
+    flash[:notice] = "Dog was successfully deleted"
     redirect_to dogs_path
   end
 

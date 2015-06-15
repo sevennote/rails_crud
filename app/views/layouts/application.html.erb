@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
   <nav> <a href="/dogs"><p>home</p></a><a href="/dogs/new"><p>new</p> </a> </nav>
 <%= yield %>
 
